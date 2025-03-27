@@ -20,6 +20,8 @@ def send_message():
 SERVER = "127.0.0.1"
 PORT = 5050
 
+name = input("Whats yo name:")
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((SERVER, PORT))
 
