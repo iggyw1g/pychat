@@ -103,7 +103,6 @@ class ChatClientGUI:
     def display_message(self, sender, message):
         self.chat_display.config(state='normal')
         
-        # Different colors for different senders
         if sender == "System":
             self.chat_display.tag_config('system', foreground='blue')
             self.chat_display.insert(tk.END, f"{sender}: ", 'system')
