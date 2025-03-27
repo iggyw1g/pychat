@@ -1,5 +1,5 @@
 import socket
-import threading 
+import threading
 
 clients = {}  
 
@@ -39,7 +39,9 @@ def start_server():
         client_socket, address = server.accept()
         thread = threading.Thread(target=handle_client, args=(client_socket, address))
         thread.start()
+        print(client_socket)
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+        
 
 
 SERVER = "127.0.0.1"
@@ -50,3 +52,4 @@ server.bind((SERVER, PORT))
 
 print("[STARTING] Server is starting...")
 start_server()
+
